@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас | Магазин протигазів</title>
+<link rel="stylesheet" href="about.css">
+    
+</head>
+
+<body>
+<header class="header">
+    <div class="header-top">
+        <img class="logo" src="foto/logo.png">
+<a class="nav-link active" href="about.html">Про нас</a>
+         <a class="nav-link" href="index.html" onclick="filterProducts('all', this)">Усі</a>
+<a class="nav-link" href="index.html" onclick="filterProducts('military', this)">Воєнні</a>
+<a class="nav-link" href="index.html" onclick="filterProducts('rh bz', this)">РХБЗ</a>
+<a class="nav-link" href="index.html" onclick="filterProducts('children', this)">Дитячі</a>
+<a class="nav-link" href="index.html" onclick="filterProducts('isolating', this)">Ізолюючі</a>
+
+
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒
+            <span id="cart-count">0</span>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="foto/logo2.png">
+    </div>
+<!-- КОШИК -->
+    <div class="cart-box" id="cart">
+    <h2>🛒 Мій кошик</h2>
+
+    <div id="cart-items">
+        <p>Кошик порожній</p>
+    </div>
+
+    <h3>Разом: <span id="cart-total">0</span> грн</h3>
+
+    <button class="cart-clear" onclick="clearCart()">
+        Очистити кошик
+    </button>
+</div>
+</header>
+<section class="hero">
+    <h1>Про наш магазин</h1>
+    <p>
+        Магазин радянських протигазів та спорядження.
+        Історія, колекціонування та широкий вибір моделей
+        в одному місці.
+    </p>
+</section>
+
+<main class="container">
+
+    <h2 class="section-title">Хто ми?</h2>
+
+    <div class="about-text">
+        <p>
+            Вітаємо у нашому інтернет-магазині!
+            Ми спеціалізуємося на продажу протигазів
+            виробництва СРСР, комплектуючих та аксесуарів.
+        </p>
+
+        <p>
+            Наш магазин створений для колекціонерів,
+            поціновувачів військової історії та всіх,
+            хто цікавиться спорядженням минулих років.
+        </p>
+
+        <p>
+            Ми прагнемо зробити покупки простими та зручними:
+            ви можете переглядати каталог, додавати товари
+            до кошика та бачити загальну вартість замовлення.
+        </p>
+    </div>
+
+    <h2 class="section-title">Чому обирають нас?</h2>
+
+    <div class="features">
+
+        <div class="feature-card">
+            <div class="icon">🎖️</div>
+            <h3>Асортимент</h3>
+            <p>
+                Різні моделі протигазів, комплектуючі
+                та аксесуари.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🛒</div>
+            <h3>Зручний магазин</h3>
+            <p>
+                Простий каталог, зручний кошик
+                та зрозуміле оформлення покупок.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🤝</div>
+            <h3>Підтримка</h3>
+            <p>
+                Допомога з вибором товарів
+                та відповіді на запитання покупців.
+            </p>
+        </div>
+
+    </div>
+
+    <section class="contacts">
+
+        <h2 class="section-title">Наші контакти</h2>
+
+        <div class="contact-item">
+            <span>📞 Телефон</span>
+            <a href="tel:+380956339861">
+                095 633 98 61
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <span>✉️ Електронна пошта</span>
+            <p>htmlccs.js</p>
+        </div>
+
+        <div class="contact-item">
+            <span>📍 Місцезнаходження</span>
+            <p>львів</p>
+        </div>
+
+        <div class="contact-item">
+            <span>🛍️ Оформлення замовлення</span>
+            <p>
+                Оберіть товари в каталозі та додайте
+                їх до кошика.
+            </p>
+        </div>
+
+
+    </section>
+
+</main>
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-info">
+            <h2>GP-5 STORE</h2>
+            <p>Магазин засобів індивідуального захисту</p>
+        </div>
+
+        <div class="footer-contacts">
+            <h3>Контакти</h3>
+            <p>Телефон: +380 XX XXX XX XX</p>
+            <p>Email: gp5store@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 GP-5 STORE. Усі права захищені.
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

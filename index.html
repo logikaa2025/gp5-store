@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GP-5 STORE</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header class="header">
+    <div class="header-top">
+        <img class="logo" src="foto/logo.png">
+        
+<a class="nav-link" href="about.html">Про нас</a>
+    <a class="nav-link active" href="#" onclick="filterProducts('all', this)">Усі</a>
+<a class="nav-link" href="#" onclick="filterProducts('military', this)">Воєнні</a>
+<a class="nav-link" href="#" onclick="filterProducts('rh bz', this)">РХБЗ</a>
+<a class="nav-link" href="#" onclick="filterProducts('children', this)">Дитячі</a>
+<a class="nav-link" href="#" onclick="filterProducts('isolating', this)">Ізолюючі</a>
+
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒
+            <span id="cart-count">0</span>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="foto/logo2.png">
+    </div>
+<!-- КОШИК -->
+    <div class="cart-box" id="cart">
+    <h2>🛒 Мій кошик</h2>
+
+    <div id="cart-items">
+        <p>Кошик порожній</p>
+    </div>
+
+    <h3>Разом: <span id="cart-total">0</span> грн</h3>
+
+    <button class="cart-clear" onclick="clearCart()">
+        Очистити кошик
+    </button>
+    <button class="buy-button" onclick="buyProducts()">Купити</button>
+</div>
+</header>
+
+<main>
+
+<div class="card-container">
+
+<div class="card" data-category="military">
+<img src="foto/pic1.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-1</h5>
+<p class="card-text">Ціна 2000 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic2.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">противогаз гп-2</h5>
+<p class="card-text">Ціна 1500 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic3.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-4</h5>
+<p class="card-text">Ціна 500 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic4.png" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-5</h5>
+<p class="card-text">Ціна 200 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic5.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-5м</h5>
+<p class="card-text">Ціна 300 Гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic6.webp" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-7</h5>
+<p class="card-text">Ціна 500 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic7.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-9</h5>
+<p class="card-text">Ціна 900 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic8.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-10</h5>
+<p class="card-text">Ціна 2000 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic9.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-15</h5>
+<p class="card-text">Ціна 3000 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic10.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз гп-21</h5>
+<p class="card-text">Ціна 3000 Гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic11.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пмк-1</h5>
+<p class="card-text">Ціна 1250 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic12.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пмк-2</h5>
+<p class="card-text">Ціна 1400 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic13.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противгаз пмк-3</h5>
+<p class="card-text">Ціна 8000 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="rh bz">
+<img src="foto/pic14.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пмк-4</h5>
+<p class="card-text">Ціна 13000 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic15.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">противогаз пмг-1 нерехта</h5>
+<p class="card-text">Ціна 500 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic16.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">противогаз пмг-2</h5>
+<p class="card-text">Ціна 500 грн</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic17.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пбф-хомяк</h5>
+<p class="card-text">Ціна 1100 гривеь</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic18.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз Шмс</h5>
+<p class="card-text">Ціна 1000 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic19.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз прв-у</h5>
+<p class="card-text">Ціна 2800 гривнь</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic20.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз шм41м</h5>
+<p class="card-text">Ціна 500 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic21.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз мо4</h5>
+<p class="card-text">Ціна 700 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="military">
+<img src="foto/pic22.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз мм1</h5>
+<p class="card-text">Ціна 1000 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="children">
+<img src="foto/pic23.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пдф-2д</h5>
+<p class="card-text">Ціна 400 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="children">
+<img src="foto/pic24.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пдФ-2ш</h5>
+<p class="card-text">ціна 700 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="children">
+<img src="foto/pic25.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пдф-6м</h5>
+<p class="card-text">250 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="children">
+<img src="foto/pic26.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз пдф-7</h5>
+<p class="card-text">Ціна 200 грн</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="isolating">
+<img src="foto/pic27.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз ип4</h5>
+<p class="card-text">Ціна 950 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+<div class="card" data-category="isolating">
+<img src="foto/pic28.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Противогаз ип4м</h5>
+<p class="card-text">Ціна 850 гривень</p>
+<button class="add-to-cart">Купити</button>
+</div>
+</div>
+
+</div>
+
+</main>
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-info">
+            <h2>GP-5 STORE</h2>
+            <p>Магазин засобів індивідуального захисту</p>
+        </div>
+
+        <div class="footer-contacts">
+            <h3>Контакти</h3>
+            <p>Телефон: +380 XX XXX XX XX</p>
+            <p>Email: gp5store@gmail.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 GP-5 STORE. Усі права захищені.
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
